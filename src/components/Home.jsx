@@ -2,7 +2,9 @@ import React from "react";
 import HeroImage from "../assets/heroImages.JPG";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-scroll";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 const Home = () => {
   return (
     <div
@@ -37,6 +39,7 @@ const Home = () => {
 
         <div className="w-2/3">
           <img
+          data-aos="fade-up" data-aos-duration="700"
             src={HeroImage}
             alt="my profile"
             className="rounded-2xl mx-auto object-cover w-2/3 "

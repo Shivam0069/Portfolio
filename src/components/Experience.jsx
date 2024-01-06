@@ -8,7 +8,9 @@ import nextjs from "../assets/nextjs.png";
 import graphql from "../assets/graphql.png";
 import github from "../assets/github.png";
 import tailwind from "../assets/tailwind.png";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 const Experience = () => {
   const techs = [
     {
@@ -77,6 +79,8 @@ const Experience = () => {
         <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0">
           {techs.map(({ id, src, title, style }) => (
             <div
+            data-aos="fade-up"
+            data-aos-duration="700"
               key={id}
               className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
             >

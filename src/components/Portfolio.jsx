@@ -4,7 +4,9 @@ import IMDb from "../assets/portfolio/IMDb.webp";
 import Google from "../assets/portfolio/Google.webp";
 import Instagram from "../assets/portfolio/Instagram.jpeg";
 import Ecommerce from "../assets/portfolio/Ecommerce.jpeg";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 const Portfolio = () => {
   const portfolios = [
     {
@@ -57,9 +59,11 @@ const Portfolio = () => {
           <p className="py-6">Check out some of my work right here</p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0" >
           {portfolios.map(({ id, src, demo, code, title, description }) => (
             <div
+            data-aos="fade-up"
+            data-aos-duration="700"
               key={id}
               className="shadow-md shadow-gray-600 rounded-lg group"
             >
